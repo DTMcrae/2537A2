@@ -160,7 +160,7 @@ app.get('/logout', (req, res) => {
 
 app.get('/admin', (req, res) => {
     if (!req.session.authenticated) {
-        res.redirect('/');
+        res.redirect('/login');
         return;
     }
 
