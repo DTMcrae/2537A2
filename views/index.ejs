@@ -1,0 +1,40 @@
+<%- include("templates/header") %>
+
+<div class="px-4 pt-5 my-5 text-center border-bottom">
+    <% if(user.name) { %>
+        <h1 class="display-4 fw-bold">Welcome back, <%- user.name %>!</h1>
+    <% } else { %>
+        <h1 class="display-4 fw-bold">Welcome!</h1>
+    <% } %>
+    <div class="col-lg-6 mx-auto">
+        <% if(user.name) { %>
+            <p class="lead mb-4">We're thrilled to have you back and ready to continue our journey of discovery together. Whether you've been away for a
+            while or just needed a break, there's always something new to explore and learn. So, let's pick up
+            where we left off and continue our adventure.</p>
+            
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a href="members"><button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Member Area</button></a>
+                <a href="logout"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Logout</button></a>
+            </div>
+        <% } else { %>
+            <p class="lead mb-4">Welcome to Astra Vis, where we invite you to discover the wonders of the universe. From the depths
+                of the
+                ocean to the far reaches of outer space, there are endless mysteries and treasures waiting to be uncovered. Join us
+                as we embark on an incredible
+                journey of discovery and exploration. The universe awaits, where would you like to begin?</p>
+            
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a href="signup"><button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Sign Up</button></a>
+                <a href="login"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Login</button></a>
+            </div>
+        <% } %>
+    </div>
+    <div style="max-height: 50vh;">
+        <div class="container px-5">
+            <img src="/nightwalk.webp" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+                width="700" height="500" loading="lazy">
+        </div>
+    </div>
+</div>
+
+<%- include("templates/footer") %>

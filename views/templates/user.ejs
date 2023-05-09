@@ -1,0 +1,5 @@
+<li class="list-group-item">
+    <%- user.name %> (<%- user.user_type %>) 
+    <a class="btn btn-danger btn-sm px-3" href="/statusPromote/<%-user._id%>">Promote to Admin</a>
+    <a class="btn btn-info btn-sm px-3" href="/statusDemote/<%-user._id%>">Demote to User</a>
+</li>

@@ -1,0 +1,25 @@
+<%- include("templates/header") %>
+
+    <div class="card">
+        <div class="card-body">
+            <form action="/loginSubmit" method="post">
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="email">Email address</label>
+                    <input type="email" name="email" placeholder="Email" class="form-control"/>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password" class="form-control" />
+                </div>
+
+                <button class="btn btn-primary btn-block mb-4">Sign in</button>
+
+                <div class="text-center">
+                    <p>Not a member? <a href="signup">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include("templates/footer") %>
